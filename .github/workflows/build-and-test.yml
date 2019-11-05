@@ -82,11 +82,11 @@ jobs:
           pub global activate --no-executables json_annotation 1.2.0
         shell: pwsh
 
-      - name: npm ci and lint
+      - name: npm ci
         #continue-on-error: false
         run: |
           npm ci
-          npm run lint
+          #npm run lint
 
       - name: npm build
         #continue-on-error: false
