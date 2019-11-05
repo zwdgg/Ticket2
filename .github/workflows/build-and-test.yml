@@ -87,12 +87,16 @@ jobs:
         run: |
           npm ci
           
-      - name: npm lint and build
+      - name: npm lint
         continue-on-error: false
         run: |
           npm run lint
-          npm run build
 
+      - name: npm build
+        continue-on-error: false
+        run: |
+          npm run build    
+        
       - name: npm test
         run: |
           npm test
