@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     strategy:
-      fail-fast: false
+      #fail-fast: false
       matrix:
         #os: [ubuntu-latest, windows-latest, macOS-latest]
         os: [windows-latest]
@@ -86,11 +86,11 @@ jobs:
         #continue-on-error: false
         run: |
           npm ci
-          #npm run lint
 
-      - name: npm build
-        #continue-on-error: false
+      - name: npm lint and build
+        continue-on-error: false
         run: |
+          npm run lint
           npm run build    
         
       - name: npm test
