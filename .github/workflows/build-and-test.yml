@@ -83,6 +83,7 @@ jobs:
         shell: pwsh
 
       - name: npm ci, lint and build
+        continue-on-error: false
         run: |
           npm ci
           npm run lint
