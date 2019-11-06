@@ -92,6 +92,7 @@ jobs:
         run: |
           npm run lint
           npm run build    
+        shell: powershell
         
       - name: npm test
         run: |
